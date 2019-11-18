@@ -20,6 +20,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>de.alsk</groupId>
+            <artifactId>compiler</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
@@ -46,4 +52,11 @@
         </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <id>project.local</id>
+            <name>project</name>
+            <url>file:${project.basedir}/repo</url>
+        </repository>
+    </repositories>
 </project>
