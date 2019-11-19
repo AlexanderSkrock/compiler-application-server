@@ -26,7 +26,7 @@ public class TestEndpoint {
     @GetMapping("test/regex")
     public boolean testRegex(@RequestParam(name = "string", defaultValue = "123Hallo456") String string) throws Exception {
         String regexString = "0|([1-9][0-9]*)|[a-zA-Z]+";
-        return regexEndpoint.testRegex(regexString, string);
+        return regexEndpoint.testRegex(new RegexEndpoint.RegexParameters(regexString, string));
     }
 
     @GetMapping("test/scan")
